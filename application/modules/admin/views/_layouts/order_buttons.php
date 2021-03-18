@@ -4,6 +4,7 @@
 </script>
 <script src="<?php echo base_url('assets/js/page.js') ?>"></script>
 
+
 <div style="margin-left: 0;">
     <button class="btn btn-primary" onclick="importList();">Import</button>
     <?php if ($order_type == 'new') { ?>
@@ -21,6 +22,8 @@
 <!--        <button class="btn btn-info" onclick="clearPrice();">Clear</button>-->
         <button class="btn btn-info" onclick="makeCheck(0);">Check</button>
     <?php } ?>
+    <label>   Time Interval(ms)</label>
+    <input type="number" id="interval" value="1000"/>
 </div>
 <div class="overlay" style="display: none;"></div>
 <div class="loading-img" style="display: none;"></div>
@@ -43,58 +46,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-default">Import</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="modal fade" id="edit_modal" role="dialog" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog">
-        <form id="edit_form" action="#">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Edit customer detail</h4>
-                </div>
-                <div class="modal-body">
-                    <input type="hidden" name="data[id]" value="0"/>
-                    <div class="form-group">
-                        <label>Name*</label><br/>
-                        <input type="text" name="data[recipient_name]" class="form-control" autocomplete="off"
-                               required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Address1*</label><br/>
-                        <input type="text" name="data[ship_address_1]" class="form-control" autocomplete="off"
-                               required/>
-                    </div>
-                    <div class="form-group">
-                        <label>Address2</label><br/>
-                        <input type="text" name="data[ship_address_2]" class="form-control" autocomplete="off"/>
-                    </div>
-                    <div class="form-group">
-                        <label>City*</label><br/>
-                        <input type="text" name="data[ship_city]" class="form-control" autocomplete="off" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>State*</label><br/>
-                        <input type="text" name="data[ship_state]" class="form-control" autocomplete="off" required/>
-                    </div>
-                    <div class="form-group">
-                        <label>PostalCode*</label><br/>
-                        <input type="text" name="data[ship_postal_code]" class="form-control" autocomplete="off"
-                               required/>
-                    </div>
-                    <div class="form-group">
-                        <label>PhoneNumber*</label><br/>
-                        <input type="text" name="data[buyer_phone_number]" class="form-control" autocomplete="off"
-                               required/>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-default">Save</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -134,8 +85,8 @@
 
     $('#import_form').submit(function (e) {
         e.preventDefault();
-        if (!window.confirm('will you import this file?'))
-            return false;
+        // if (!window.confirm('will you import this file?'))
+        //     return false;
         setMask(1);
         $(this).ajaxSubmit({
             url: baseURL + 'get/importList',
@@ -169,7 +120,7 @@
     // let url="http://localhost:8111/";
     let url = "http://localhost:8111/";
 
-    function GetCheckedList(modal_title, msg, isMultiple, type = 'order') {
+    async function GetCheckedList(modal_title, msg, isMultiple, type = 'order') {
         let checked_list = [];
         $('.select-row:checked').each(function () {
             let email = $(this).data('email');
@@ -188,11 +139,11 @@
         if (!window.confirm(msg))
             return;
         let stepList = [];
-
+        console.log(checked_list);
         for (let k in checked_list) {
             if (checked_list.hasOwnProperty(k)) {
                 console.log("ajax call email is " + k);
-                console.log(checked_list[k]);
+                // console.log(checked_list[k]);
                 if (type=='track') {
                     let email=k;
                     $.ajax({
@@ -211,7 +162,8 @@
                 else {  //order
                     SendOrderAjax(checked_list[k], isMultiple, stepList, k);
                 }
-                sleep(1000);
+                let interval=parseInt($('#interval').val()) || 1000;
+                await sleep(interval);
             }
         }
     }
@@ -227,9 +179,11 @@
         GetCheckedList(modal_title, msg, isMultiple);
     }
 
-    function sleep(delay) {
-        let start = new Date().getTime();
-        while (new Date().getTime() < start + delay) ;
+    function sleep(ms) {
+        console.log('sleep ',ms);
+        return new Promise(resolve => setTimeout(resolve, ms));
+        // let start = new Date().getTime();
+        // while (new Date().getTime() < start + delay) ;
     }
 
     function SendOrderAjax(idList, isMultiple, order_step, email) {
