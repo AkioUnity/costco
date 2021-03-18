@@ -1,0 +1,116 @@
+[12-Nov-2017 13:37:14 UTC] PHP Fatal error:  Uncaught GuzzleHttp\Exception\RequestException: cURL error 56: Recv failure: Connection reset by peer (see http://curl.haxx.se/libcurl/c/libcurl-errors.html) in /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php:187
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(150): GuzzleHttp\Handler\CurlFactory::createRejection(Object(GuzzleHttp\Handler\EasyHandle), Array)
+#1 /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php(103): GuzzleHttp\Handler\CurlFactory::finishError(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#2 /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php(43): GuzzleHttp\Handler\CurlFactory::finish(Object(GuzzleHttp\Handler\CurlHandler), Object(GuzzleHttp\Handler\EasyHandle), Object(GuzzleHttp\Handler\CurlFactory))
+#3 /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php(28) in /home/m7slabspw/public_html/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php on line 187
+[12-Nov-2017 13:37:51 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Selector "id" is not registered. in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php:87
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\SelectorsHandler->getSelector('id')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('id', 'header_sign_in')
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('id', 'header_sign_in')
+#3 /home/m7slabspw/public_html/test2.php(18): Behat\Mink\Element\Element->find('id', 'header_sign_in')
+#4 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php on line 87
+[12-Nov-2017 13:37:54 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Selector "id" is not registered. in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php:87
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\SelectorsHandler->getSelector('id')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('id', 'header_sign_in')
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('id', 'header_sign_in')
+#3 /home/m7slabspw/public_html/test2.php(18): Behat\Mink\Element\Element->find('id', 'header_sign_in')
+#4 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php on line 87
+[12-Nov-2017 13:46:17 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(29): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:46:20 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(29): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:46:22 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(29): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:46:53 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(29): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:48:09 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(31): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:48:17 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(31): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:52:49 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(31): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:52:57 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(31): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:54:09 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(33): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 13:54:54 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unknown named selector provided: "name". Expected one of (fieldset, field, link, button, link_or_button, content, select, checkbox, radio, file, optgroup, option, table, id, id_or_name) in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php:215
+Stack trace:
+#0 /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/SelectorsHandler.php(111): Behat\Mink\Selector\NamedSelector->translateToXPath('LogonForm')
+#1 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(165): Behat\Mink\Selector\SelectorsHandler->selectorToXpath('named_exact', Array)
+#2 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(157): Behat\Mink\Element\Element->findAll('named_exact', Array)
+#3 /home/m7slabspw/public_html/vendor/behat/mink/src/Element/Element.php(146): Behat\Mink\Element\Element->findAll('named', Array)
+#4 /home/m7slabspw/public_html/test2.php(34): Behat\Mink\Element\Element->find('named', Array)
+#5 {main}
+  thrown in /home/m7slabspw/public_html/vendor/behat/mink/src/Selector/NamedSelector.php on line 215
+[12-Nov-2017 14:09:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function submit() in /home/m7slabspw/public_html/test2.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/m7slabspw/public_html/test2.php on line 48
